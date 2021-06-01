@@ -1,0 +1,67 @@
+.about-container-wrap {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.about-container {
+	width: 1140px;
+	margin: 0 auto;
+	padding: 0 50px;
+	margin-top: 64px;
+	padding-bottom: 26px;
+	margin-top: 96px;
+	margin-bottom: 40px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 5px 10px 0 rgba(64,158,225,.1);
+	-moz-box-shadow: 0 10px 10px 0 rgba(64,158,225,.1);
+	box-shadow: 0 10px 10px 0 rgba(64,158,225,.1);
+}
+
+.about-container .about-title {
+	font-size: 24px;
+	line-height: 35px;
+	color: #4c5b6a;
+	text-align: center;
+	margin-bottom: 35px;
+	padding-top: 59px;
+}
+
+.about-container p {
+	font-size: 16px;
+	text-indent: 2em;
+	color: #4a4c52;
+	line-height: 34px;
+	margin-bottom: 42px;
+}
+
+.about-container .sub-title {
+	font-size: 18px;
+	text-indent: 0;
+	color: #4c5b6a;
+	margin-bottom: 2px;
+}
+
+.about-container li {
+	font-size: 16px;
+	line-height: 34px;
+	color: #4a4c52;
+}
+
+.about-container .first-ul {
+	padding-left: 2em;
+}
+
+.about-container .second-ul {
+	padding-left: 2em;
+}
+
+.about-container .third-ul {
+	padding-left: 2em;
+	/*margin: 10px 0;*/
+}
+
+.about-container .ul-title {
+	margin-top: 42px;
+	margin-bottom: 10px;
+}
+

@@ -1,0 +1,37 @@
+{
+	"data": [
+	         {
+	        	"time": "2018/09/26 14:35",
+	        	"total": "0.6",
+	        	"coin": "1",
+	        	"type": "1",
+	        	"rewardstatus": "1",
+	        	"number": "",
+	        	"operate": ""
+	         },{
+	        	"time": "2018/09/25 15:39",
+	        	"total": "0.6",
+	        	"coin": "2",
+	        	"type": "2",
+	        	"rewardstatus": "1",
+	        	"number": "",
+	        	"operate": ""
+	         },{
+	        	"time": "2018/09/25 15:37",
+	        	"total": "21",
+	        	"type": "1",
+	        	"rewardstatus": "1",
+	        	"number": "",
+	        	"operate": ""
+	         },{
+	        	"time": "2018/09/25 15:35",
+	        	"total": "13",
+	        	"coin": "1",
+	        	"type": "1",
+	        	"rewardstatus": "2",
+	        	"number": "ab283fy5r27y834qfrc27fy4c534f0y8d78y348",
+	        	"operate": ""
+		         }
+	         
+	         ]
+}

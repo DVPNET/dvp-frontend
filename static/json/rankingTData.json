@@ -1,0 +1,54 @@
+{
+	"state": "yes",
+	"msg": "success!",
+	"data":  [{
+         "risk_rank_th": "1",
+         "risk_number_th": "极高",
+         "risk_name_th": "阿格斯AC交易所",
+         "risk_hole_th":"27",
+         "risk_star_th":"3.7",
+         "risk_exit_th":"",
+         "risk_status_th":"无法通报",
+         "vulTitle":"1"
+      }, {
+		  "risk_rank_th": "2",
+	      "risk_number_th": "极高",
+	      "risk_name_th": "比特王交易所 ",
+	      "risk_hole_th":"10",
+	      "risk_star_th":"2",
+	      "risk_exit_th":"",
+	      "risk_status_th":"无法通报",
+	      "vulTitle":"2"
+      }, {
+    	  "risk_rank_th": "3",
+          "risk_number_th": "极高",
+          "risk_name_th": "币投网交易所 ",
+          "risk_hole_th":"7",
+          "risk_star_th":"1",
+          "risk_exit_th":"",
+          "risk_status_th":"无法通报",
+          "vulTitle":"1"
+      },{
+    	  "risk_rank_th": "4",
+          "risk_number_th": "极高",
+          "risk_name_th": "MT场外交易所 ",
+          "risk_hole_th":"4",
+          "risk_star_th":"-10",
+          "risk_exit_th":"",
+          "risk_status_th":"无法通报",
+          "vulTitle":"1"
+      }],
+      "classify_rank": [{
+    	  "type": "1",
+    	  "allnum": "1080"
+      },{
+    	  "type": "2",
+    	  "allnum": "1086"
+      },{
+    	  "type": "3",
+    	  "allnum": "2000"
+      },{
+    	  "type": "4",
+    	  "allnum": "6666"
+      }]
+}

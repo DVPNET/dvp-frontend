@@ -1,0 +1,55 @@
+{
+	"etherdata": [
+	         		              {
+									"id": "1",
+									"Number": "DVP-2018-00075",
+									"level": "1",
+									"title": "测试酷酷咿呀",
+									"vendor": "666交易所",
+									"status": "2",
+									"rlstatus": "",
+									"rewardstatus": "1",
+									"reward": "0.5",
+									"time": "2018-09-25",
+									"operatation": ""
+								},{
+									"id": "2",
+									"Number": "DVP-2018-00075",
+									"level": "2",
+									"title": "测试DVP提现",
+									"vendor": "VVBTC",
+									"status": "2",
+									"rlstatus": "1",
+									"rewardstatus": "1",
+									"reward": "0.6",
+									"time": "2018-09-21",
+									"operatation": ""
+								},{
+									"id": "3",
+									"Number": "DVP-2018-00075",
+									"level": "3",
+									"title": "测试选择厂商类",
+									"vendor": "灰太狼",
+									"status": "2",
+									"rlstatus": "2",
+									"rewardstatus": "1",
+									"reward": "0.8",
+									"time": "2018-09-19",
+									"operatation": ""
+								}],
+	  "DVPdata": [
+	         	             	 {
+									"id": "4",
+									"Number": "DVP-2018-00075",
+									"level": "3",
+									"title": "测试POC注册",
+									"vendor": "喜洋洋",
+									"status": "2",
+									"rlstatus": "3",
+									"rewardstatus": "2",
+									"reward": "1.6",
+									"time": "2018-09-18",
+									"operatation": ""
+								} ]
+
+}

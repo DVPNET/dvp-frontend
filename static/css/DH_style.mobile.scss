@@ -1,0 +1,210 @@
+@import "../../src/app.scss";
+
+.lddt-page-wrap {
+  .lddt_wrap {
+    position: relative;
+  }
+  .el-tabs__content {
+    overflow: unset;
+  }
+  .fr {
+    position: absolute;
+    top: -79px;
+    right: 15px;
+    z-index: 9;
+    float: none;
+  }
+  .searinp {
+    position: initial;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  // login & register
+  .logAreg_boxbg {
+    padding: p2r(30) p2r(15);
+    box-sizing: border-box;
+  }
+  .logAreg_box {
+    width: 100%;
+    margin-top: p2r(64);
+    padding: p2r(15);
+  }
+
+  //bounty-vender
+  .bounty-vendor {
+    .search {
+      position: initial !important;
+      width: 100% !important;
+      padding: 0 p2r(12) !important;
+      box-sizing: border-box;
+      margin-bottom: p2r(20);
+      .el-input {
+        width: auto;
+      }
+    }
+    #pages {
+      margin: p2r(15) 0;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  .bountyWrap {
+    .rewardOne,
+    .rewardTwo,
+    .rewardThree,
+    .rewardFour,
+    .rewardFive,
+    .rewardSeven,
+    .rewardSix {
+      display: flex;
+      flex-direction: column;
+      padding: 0 p2r(15);
+      box-sizing: border-box;
+      & > div {
+        width: 100% !important;
+        dl {
+          width: 100% !important;
+        }
+      }
+    }
+    .rewardOne {
+      dt,
+      dl dt img {
+        margin-left: 0 !important;
+        width: 100%;
+      }
+      dl dd {
+        width: 100% !important;
+      }
+    }
+    .rewardTwo {
+      dl {
+        display: flex;
+        align-items: flex-start;
+        dd {
+          height: auto;
+        }
+      }
+    }
+    .rewardFour {
+      .Fourimg {
+        display: none;
+      }
+    }
+    .rewardFive {
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li {
+          width: 48% !important;
+          height: auto !important;
+          margin: 0 0 p2r(15) 0 !important;
+        }
+      }
+    }
+  }
+  .lddt-page-wrap {
+    .lddt_wrap {
+      position: relative;
+    }
+    .fr {
+      text-align: center;
+      position: initial;
+    }
+  }
+
+  #statistical-analysis {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    padding: 0 p2r(15);
+    box-sizing: border-box;
+    .chart-wrap {
+      display: flex;
+      flex-direction: column;
+      .chart-item {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: p2r(15);
+      }
+    }
+  }
+  .container-fluid {
+    .span3 {
+      display: none;
+    }
+    .row-fluid .hero-unit {
+      padding: 0 p2r(15) !important;
+      width: 100%;
+      .update-time {
+        left: p2r(20) !important;
+      }
+    }
+  }
+
+  .Risk_wrapphb {
+    .cons {
+      width: 100% !important;
+      min-width: 100% !important;
+      max-width: 100% !important;
+      display: flex !important;
+      flex-direction: column;
+      box-sizing: border-box;
+      padding: 0 p2r(15) !important;
+      & > div {
+        margin-left: 0 !important;
+        width: 100% !important;
+        float: none !important;
+      }
+      .search-group {
+        display: none;
+      }
+    }
+    .cen_1phb {
+      padding: 0;
+      display: flex !important;
+      padding: p2r(10) p2r(15) !important;
+      .wow {
+        display: flex !important;
+        align-items: flex-end;
+        justify-content: center;
+      }
+      .cen_1phb1_1,
+      .cen_1phb1_3 {
+        flex: 3;
+      }
+      .cen_1phb1_2 {
+        padding: 0;
+        flex: 4;
+      }
+      .risk_head {
+        dt {
+          width: auto;
+          height: auto;
+          padding-top: p2r(21) !important;
+          min-height: unset;
+          span {
+            width: 60% !important;
+            img {
+              height: auto !important;
+              min-height: unset;
+            }
+          }
+        }
+        dd p {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          span {
+            font-size: p2r(12);
+          }
+        }
+      }
+    }
+  }
+}
