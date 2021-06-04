@@ -36,7 +36,7 @@ import "../src/assets/scss/reset-element.scss";
 import VueQArt from "vue-qart";
 
 import "../static/css/DH_style.mobile.scss";
-
+import "../static/js/twiter";
 //设置cookie缓存跨域问题
 axios.defaults.withCredentials = true;
 Vue.config.productionTip = false;

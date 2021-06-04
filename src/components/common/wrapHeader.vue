@@ -82,8 +82,8 @@
                             </el-menu-item
                             >
                         </el-submenu>
-                         <el-menu-item index="/detection"
-                                       @click.native="toRouter('detection')">
+                         <el-menu-item index="/defi"
+                                       @click.native="toRouter('defi')">
                              {{$t('dvp_head.Detection')}}
                              <p></p>
                          </el-menu-item>

@@ -2,8 +2,10 @@
     <div class="detection">
         <detection-title></detection-title>
         <div class="search">
-            <el-input placeholder="输入智能合约地址（选填）" v-model="address" class="" style="width: 520px;">
-                <el-select class="__el-select" v-model="chain" slot="prepend" placeholder="请选择">
+            <el-input :placeholder="$t('Detection.AddressPlace')"
+                      v-model="address" class="" style="width: 520px;">
+                <el-select class="__el-select" v-model="chain"
+                           slot="prepend" :placeholder="$t('Detection.PleaseChoose')">
                     <el-option v-for="item in tokenList"
                                :key="item.token"
                                :label="item.token"
@@ -18,23 +20,30 @@
                        :disabled="disabled"
                        @click="sendCode"
                        type="primary">
-                立即检测
+                {{ $t('Detection.DetectNow') }}
             </el-button>
         </div>
         <div class="content">
 
-            <div class="title">Contract Source Code (Solidity)</div>
+            <div class="title">{{ $t('Detection.SolidityCode') }}</div>
             <div class="solidity">
-                <el-input
-                    class="__el-textarea__inner"
-                    type="textarea"
-                    placeholder="Code"
-                    style="height: 100%"
-                    v-model="code">
-                </el-input>
+                <!--                <el-input-->
+                <!--                    class="__el-textarea__inner"-->
+                <!--                    type="textarea"-->
+                <!--                    placeholder="Code"-->
+                <!--                    style="height: 100%"-->
+                <!--                    v-model="code">-->
+                <!--                </el-input>-->
+
+                <textarea
+                    ref="mycode"
+                    class="codesql"
+                    v-model="code"
+                    style="height:404px;width:100%"></textarea>
+
             </div>
             <div class="vulnerability">
-                vulnerability
+                {{ $t('Detection.Vulnerability') }}
             </div>
             <div class="loopholes">
                 <template v-if="!list.length">
@@ -43,15 +52,15 @@
                 <template v-else>
                     <div class="list" v-for="(data, index) in list" :key="index">
                         <div class="row">
-                            <div class="left">漏洞定位：</div>
+                            <div class="left">{{ $t('Detection.VulnerabilityLocation') }}</div>
                             <div class="right">{{ data.line }}</div>
                         </div>
                         <div class="row">
-                            <div class="left">漏洞描述：</div>
+                            <div class="left">{{ $t('Detection.VulnerabilityDescription') }}</div>
                             <div class="right">{{ data.description }}</div>
                         </div>
                         <div class="row">
-                            <div class="left">漏洞类型：</div>
+                            <div class="left">{{ $t('Detection.VulnerabilityType') }}</div>
                             <div class="right">{{ data.vulnerabilityType }}</div>
                         </div>
                     </div>
@@ -63,7 +72,16 @@
 
 <script>
 import DetectionTitle from './detection-title';
+import "codemirror/theme/ambiance.css";
+import "codemirror/lib/codemirror.css";
+import "codemirror/addon/hint/show-hint.css";
 
+let CodeMirror = require("codemirror/lib/codemirror");
+require("codemirror/addon/edit/matchbrackets");
+require("codemirror/addon/selection/active-line");
+require("codemirror/mode/sql/sql");
+require("codemirror/addon/hint/show-hint");
+require("codemirror/addon/hint/sql-hint");
 export default {
     components: {
         DetectionTitle
@@ -80,7 +98,8 @@ export default {
             loading: false,
             disabled: '',
             text: '',
-            list: []
+            list: [],
+            editor: null
         }
     },
     name: "detection",
@@ -104,6 +123,7 @@ export default {
             this.loading = true;
             this.list = [];
             this.text = '';
+            this.code = this.editor.getValue();
             this.$store.dispatch('detectionStore/sendCode', {
                     "chain": this.code ? null : this.chain,
                     "contractAddress": this.code ? null : this.address,
@@ -114,18 +134,19 @@ export default {
                 this.loading = false;
                 if (res.errcode === 0) {
                     if (this.code) {
-                        this.text = '请输入正确的合约代码';
+                        this.text = this.$t('Detection.CorrectCode');
                     } else {
-                        this.text = '无法获取合约代码';
+                        this.text = this.$t('Detection.UnavailableCode');
                     }
                 }
                 if (res.errcode === 1) {
-                    this.text = '未检测出常规安全漏洞';
+                    this.text = this.$t('Detection.GeneralSafety');
                 }
                 if (res.errcode === 2) {
                     this.list = res.data.data;
-                    if (res.data.code) {
+                    if (res.data.code && this.editor) {
                         this.code = res.data.code;
+                        this.editor.setValue(res.data.code);
                     }
                 }
             })
@@ -136,10 +157,28 @@ export default {
             } else {
                 this.disabled = false
             }
-        }
+        },
     },
     mounted() {
-
+        let mime = 'text/x-mariadb'
+        this.editor = CodeMirror.fromTextArea(this.$refs.mycode, {
+            mode: mime,
+            indentWithTabs: true,
+            smartIndent: true,
+            lineNumbers: true,
+            matchBrackets: true,
+            autofocus: true,
+            extraKeys: {'Ctrl': 'autocomplete'},//自定义快捷键
+            hintOptions: {
+                tables: {
+                    users: ['name', 'score', 'birthDate'],
+                    countries: ['name', 'population', 'size']
+                }
+            }
+        })
+        this.editor.on('cursorActivity', function () {
+            this.editor.showHint()
+        });
     }
 }
 </script>

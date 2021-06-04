@@ -19,7 +19,8 @@ const messages = {
 
 const i18n = new VueI18n({
     locale: localStorage.getItem('locale') || 'en',
-    messages
+    messages,
+    silentTranslationWarn: true
 })
 
 

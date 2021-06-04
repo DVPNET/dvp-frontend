@@ -710,26 +710,26 @@ let routes = [
                         // component: resolve => require(["@/components/company/comReward"], resolve)
                         component: () => import('../components/company/comReward')
                     },
-                    {
-                        // DVP厂商入驻-悬赏管理
-                        path: "comReward_en",
-                        name: "comReward_en",
-                        meta: {
-                            title: "悬赏管理-DVP去中心化漏洞平台-专注区块链生态安全"
-                        },
-                        // component: resolve => require(["@/components/company/comReward_en"], resolve)
-                        component: () => import('../components/company/comReward_en')
-                    },
-                    {
-                        // DVP厂商入驻-悬赏管理
-                        path: "comReward_ko",
-                        name: "comReward_ko",
-                        meta: {
-                            title: "悬赏管理-DVP去中心化漏洞平台-专注区块链生态安全"
-                        },
-                        // component: resolve => require(["@/components/company/comReward_ko"], resolve)
-                        component: () => import('../components/company/comReward_ko')
-                    },
+                    // {
+                    //     // DVP厂商入驻-悬赏管理
+                    //     path: "comReward_en",
+                    //     name: "comReward_en",
+                    //     meta: {
+                    //         title: "悬赏管理-DVP去中心化漏洞平台-专注区块链生态安全"
+                    //     },
+                    //     // component: resolve => require(["@/components/company/comReward_en"], resolve)
+                    //     component: () => import('../components/company/comReward_en')
+                    // },
+                    // {
+                    //     // DVP厂商入驻-悬赏管理
+                    //     path: "comReward_ko",
+                    //     name: "comReward_ko",
+                    //     meta: {
+                    //         title: "悬赏管理-DVP去中心化漏洞平台-专注区块链生态安全"
+                    //     },
+                    //     // component: resolve => require(["@/components/company/comReward_ko"], resolve)
+                    //     component: () => import('../components/company/comReward_ko')
+                    // },
                     {
                         // DVP厂商入驻-担保金管理
                         path: "comTrade",
@@ -802,6 +802,14 @@ let routes = [
             title: "DVP去中心化漏洞平台-专注区块链生态安全"
         },
         component: () => import('../components/company/vueCode')
+    },
+    {
+        path: '/defi',
+        name: 'defi-special',
+        meta: {
+            title: "DVP去中心化漏洞平台-专注区块链生态安全"
+        },
+        component:() => import('../views/defi/defi-special')
     },
     {
         path: '/detection',
